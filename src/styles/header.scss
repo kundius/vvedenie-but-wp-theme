@@ -9,7 +9,7 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 20px 0;
   align-items: center;
 }
 
@@ -18,11 +18,12 @@
 }
 
 .header__logo {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 700;
   display: flex;
   line-height: 1;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .header__logo a {
