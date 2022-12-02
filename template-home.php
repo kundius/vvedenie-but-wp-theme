@@ -61,7 +61,7 @@ $post_news = new WP_Query([
             </div>
             <?php if ($about['image']): ?>
             <div class="about-layout__image">
-              <img class="about__image" src="<?php echo $about['image'] ?>" alt="">
+              <img class="about__image" src="<?php echo $about['image']['url'] ?>" alt="">
             </div>
             <?php endif; ?>
           </div>

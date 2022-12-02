@@ -72,6 +72,7 @@
 .about__name {
   font-size: 32px;
   font-weight: bold;
+  color: $primary-color;
 }
 
 .about__name::after {
@@ -79,12 +80,14 @@
   display: block;
   width: 80px;
   height: 3px;
-  background: #f16821;
+  background: $primary-color;
   margin-top: 12px;
 }
 
 .about__description {
   margin-top: 24px;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 .about__image {
