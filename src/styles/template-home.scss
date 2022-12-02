@@ -53,7 +53,7 @@
 }
 
 .about {
-  padding: 64px 0;
+  padding: 80px 0;
 }
 
 .about-layout {
@@ -97,7 +97,7 @@
 }
 
 .gallery {
-  padding: 64px 0;
+  padding: 64px 0 0;
   background: #f8f9fa;
 }
 
@@ -134,6 +134,67 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.clergy {
+  padding: 80px 0;
+}
+
+.clergy-headline {
+  margin-bottom: 40px;
+}
+
+.clergy-headline__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: $primary-color;
+  text-align: center;
+}
+
+.clergy-headline__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: $primary-color;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clergy-headline__description {
+  margin-top: 16px;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+}
+
+.clergy-item {
+}
+
+.clergy-item__name {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.clergy-item__description {
+  text-align: center;
+  font-size: 20px;
+}
+
+.clergy-item__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .swiper-button-prev,

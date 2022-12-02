@@ -101,6 +101,48 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
+      <?php if ($clergy = get_field('clergy')): ?>
+      <section class="clergy">
+        <div class="ui-container">
+          <div class="clergy-headline">
+            <?php if ($clergy['title']): ?>
+            <div class="clergy-headline__title">
+              <?php echo $clergy['title'] ?>
+            </div>
+            <?php endif; ?>
+            <?php if ($clergy['description']): ?>
+            <div class="clergy-headline__description">
+              <?php echo $clergy['description'] ?>
+            </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <?php if (count($clergy['items']) > 0): ?>
+        <div class="swiper clergy-swiper">
+          <div class="swiper-wrapper">
+            <?php foreach ($clergy['items'] as $item): ?>
+            <div class="swiper-slide">
+              <div class="clergy-item">
+                <div class="clergy-item__image">
+                  <img src="<?php echo $item['image']['sizes']['thumbnail'] ?>" alt="">
+                </div>
+                <div class="clergy-item__description">
+                  <?php echo $item['description'] ?>
+                </div>
+                <div class="clergy-item__name">
+                  <?php echo $item['name'] ?>
+                </div>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <?php endif; ?>
+      </section>
+      <?php endif; ?>
+
       <?php if ($post_news->have_posts()): ?>
       <section class="home-news">
         <div class="ui-container">
