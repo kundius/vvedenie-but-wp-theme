@@ -23,29 +23,23 @@ $post_news = new WP_Query([
 
       <?php if ($intro = get_field('intro')): ?>
       <section class="intro">
-        <div class="swiper intro-swiper">
-          <div class="swiper-wrapper">
-            <?php foreach ($intro['images'] as $item): ?>
-            <div class="swiper-slide intro-slide">
-              <div class="intro-slide__bg" style="background-image: url(<?php echo $item['image']['url'] ?>)"></div>
-            </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
         <div class="intro__content">
-          <div class="intro-logo">
-            <div class="intro-logo__image"></div>
-            <div class="intro-logo__text">
-              ФинСтройКонсалт
-            </div>
+          <?php if ($intro['name']): ?>
+          <div class="intro__name">
+            <?php echo $intro['name'] ?>
           </div>
+          <?php endif; ?>
+          <?php if ($intro['description']): ?>
+          <div class="intro__description">
+            <?php echo $intro['description'] ?>
+          </div>
+          <?php endif; ?>
           <?php if ($intro['link']): ?>
           <div class="intro-link">
             <a href="<?php echo $intro['link'] ?>"  class="intro-link__button">Узнать больше</a>
           </div>
           <?php endif; ?>
         </div>
-        <div class="intro__pagination swiper-pagination"></div>
       </section>
       <?php endif; ?>
 

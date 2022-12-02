@@ -1,0 +1,48 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #4c3e37;
+}
+
+.intro__content {
+
+}
+
+.intro__name {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #fff;
+}
+
+.intro__description {
+  font-size: 18px;
+  color: #d4d4d4;
+}
+
+.intro-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.intro-link__button {
+  display: inline-flex;
+  padding: 12px 24px;
+  color: #fff;
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.intro-link__button::hover {
+  background: none;
+  border: 2px solid #fff;
+}
