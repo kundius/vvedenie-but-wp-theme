@@ -24,4 +24,10 @@
 
 .header__menu {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__menu li {
 }
