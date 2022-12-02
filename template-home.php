@@ -43,6 +43,32 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
+      <?php if ($about = get_field('about')): ?>
+      <section class="about">
+        <div class="ui-container">
+          <div class="about-layout">
+            <div class="about-layout__text">
+              <?php if ($about['name']): ?>
+              <div class="about__name">
+                <?php echo $about['name'] ?>
+              </div>
+              <?php endif; ?>
+              <?php if ($about['description']): ?>
+              <div class="about__description">
+                <?php echo $about['description'] ?>
+              </div>
+              <?php endif; ?>
+            </div>
+            <?php if ($about['image']): ?>
+            <div class="about-layout__image">
+              <img class="about__image" src="<?php echo $about['image'] ?>" alt="">
+            </div>
+            <?php endif; ?>
+          </div>
+        </div>
+      </section>
+      <?php endif; ?>
+
       <?php if ($post_news->have_posts()): ?>
       <section class="home-news">
         <div class="ui-container">

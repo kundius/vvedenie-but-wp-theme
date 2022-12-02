@@ -51,3 +51,44 @@
   background: none;
   border: 2px solid #fff;
 }
+
+.about {
+  padding: 80px 0;
+}
+
+.about-layout {
+  display: flex;
+  gap: 80px;
+}
+
+.about-layout__text {
+  width: 60%;
+}
+
+.about-layout__image {
+  width: 40%;
+}
+
+.about__name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.about__name::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #f16821;
+  margin-top: 12px;
+}
+
+.about__description {
+  margin-top: 24px;
+}
+
+.about__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
