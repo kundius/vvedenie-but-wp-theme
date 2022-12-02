@@ -85,21 +85,19 @@ $post_news = new WP_Query([
             <?php endif; ?>
           </div>
         </div>
+        <?php if (count($gallery['images']) > 0): ?>
         <div class="swiper gallery-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <?php foreach ($gallery['images'] as $image): ?>
+            <div class="swiper-slide">
+              <img class="gallery-swiper__image" src="<?php echo $image['url'] ?>" alt="">
+            </div>
+            <?php endforeach; ?>
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
+        <?php endif; ?>
       </section>
       <?php endif; ?>
 
