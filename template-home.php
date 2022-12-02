@@ -69,6 +69,40 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
+      <?php if ($gallery = get_field('gallery')): ?>
+      <section class="gallery">
+        <div class="ui-container">
+          <div class="gallery-headline">
+            <?php if ($gallery['title']): ?>
+            <div class="gallery-headline__title">
+              <?php echo $gallery['title'] ?>
+            </div>
+            <?php endif; ?>
+            <?php if ($gallery['description']): ?>
+            <div class="gallery-headline__description">
+              <?php echo $gallery['description'] ?>
+            </div>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div class="swiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <?php endif; ?>
+
       <?php if ($post_news->have_posts()): ?>
       <section class="home-news">
         <div class="ui-container">

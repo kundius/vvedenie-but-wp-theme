@@ -95,3 +95,37 @@
   max-width: 100%;
   height: auto;
 }
+
+.gallery {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.gallery-headline {
+  margin-bottom: 40px;
+}
+
+.gallery-headline__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: $primary-color;
+  text-align: center;
+}
+
+.gallery-headline__title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: $primary-color;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-headline__description {
+  margin-top: 24px;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+}
