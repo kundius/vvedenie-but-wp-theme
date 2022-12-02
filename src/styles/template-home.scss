@@ -11,15 +11,17 @@
 }
 
 .intro__name {
-  font-size: 64px;
+  font-size: 40px;
   font-weight: bold;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   color: #fff;
+  text-align: center;
 }
 
 .intro__description {
   font-size: 18px;
   color: #d4d4d4;
+  text-align: center;
 }
 
 .intro-link {
@@ -40,9 +42,10 @@
   justify-content: center;
   align-items: center;
   min-height: 60px;
+  text-decoration: none;
 }
 
-.intro-link__button::hover {
+.intro-link__button:hover {
   background: none;
   border: 2px solid #fff;
 }
