@@ -1,11 +1,3 @@
-<?php
-$service_pages = new WP_Query([
-  'post_type' => 'page',
-  'post_parent' => 11,
-  'order' => 'ASC',
-  'orderby' => 'menu_order',
-]);
-?>
 <section class="footer-section">
   <div class="ui-container">
     <div class="underground">
@@ -15,7 +7,7 @@ $service_pages = new WP_Query([
             <div class="underground-contacts__title">Контакты</div>
             <div class="underground-contacts__details">
               <div class="underground-contacts__address">
-                <span itemprop="name">ООО «ФинСтройКонсалт»</span><br />
+                <span itemprop="name"><?php bloginfo('blogname') ?></span><br />
                 <span itemprop="address"><?php the_field('theme_address', 'options') ?></span>
               </div>
               <div class="underground-contacts__phone">
@@ -55,15 +47,7 @@ $service_pages = new WP_Query([
         </div>
         <div class="underground-layout__services">
             <div class="underground-services__title">Услуги</div>
-            <ul class="underground-services__list">
-              <?php while ($service_pages->have_posts()): ?>
-              <?php $service_pages->the_post()?>
-              <li>
-                <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-              </li>
-              <?php endwhile?>
-              <?php wp_reset_postdata()?>
-            </ul>
+
         </div>
       </div>
     </div>

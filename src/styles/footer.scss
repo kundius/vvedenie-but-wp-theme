@@ -79,7 +79,7 @@
 }
 
 .underground-contacts__phone svg {
-  fill: #939fae;
+  fill: #fff;
   margin: 0 6px 0 -3px;
 }
 
@@ -99,7 +99,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px dashed #939fae;
+  border-bottom: 1px dashed #fff;
 }
 
 .underground-contacts__email a:hover {
@@ -113,7 +113,7 @@
 }
 
 .underground-contacts__email svg {
-  fill: #939fae;
+  fill: #fff;
   margin: 0 11px 0 -1px;
 }
 
@@ -135,7 +135,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  border-bottom: 1px solid #939fae;
+  border-bottom: 1px solid #fff;
 }
 
 .underground-contacts__map a:hover {
@@ -149,7 +149,7 @@
 }
 
 .underground-contacts__map svg {
-  fill: #939fae;
+  fill: #fff;
   margin: 0 10px 0 -1px;
 }
 
@@ -255,8 +255,8 @@
 }
 
 .footer__copyright {
-  font-size: 11px;
-  color: #b4c5db;
+  font-size: 14px;
+  color: #fff;
 
   @include below(sm) {
     width: 100%;
