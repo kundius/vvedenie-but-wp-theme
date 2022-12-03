@@ -1,5 +1,4 @@
 .single-body {
-  background: linear-gradient(to bottom, #f1f1f1 0, #f1f1f1 222px, #f6f6f6 222px, #f6f6f6 100%);
   position: relative;
   z-index: 20;
   padding-bottom: 30px;
@@ -8,6 +7,10 @@
 
 .single-headline {
   margin-bottom: 37px;
+  width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 .single-headline__date {
@@ -47,64 +50,16 @@
   }
 }
 
-.single-layout {
-  display: flex;
-  margin-left: -30px;
-
-  @include below(lg) {
-    margin-left: -20px;
-  }
-}
-
-.single-layout__content {
-  padding-left: 30px;
-  width: calc(100% / 3 * 2);
-
-  @include below(lg) {
-    padding-left: 20px;
-  }
-
-  @include below(md) {
-    width: 100%;
-  }
-}
-
-.single-layout__side {
-  position: relative;
-  margin-left: 30px;
-  max-width: 370px;
-  flex-shrink: 0;
-  width: calc(100% / 3);
-
-  @include below(lg) {
-    padding-left: 20px;
-  }
-
-  @include below(md) {
-    display: none;
-  }
-}
-
-.single-layout__side-sicky {
-  position: sticky;
-  top: calc(88px + 25px);
-}
-
 .single-main {
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.07);
-  padding-left: 30px;
-  padding-right: 30px;
-
-  @include below(sm) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
+  width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 .single-thumbnail {
   display: block;
-  margin: 0 -30px;
+  margin: 0;
   padding: 0;
   margin-bottom: 25px;
 
