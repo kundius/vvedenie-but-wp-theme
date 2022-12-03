@@ -1,6 +1,6 @@
 import Swiper, { Pagination, EffectFade, Thumbs, Navigation } from "swiper";
 
-const swiper = new Swiper(".gallery-swiper", {
+const gallerySwiper = new Swiper(".gallery-swiper", {
   slidesPerView: 1,
   spaceBetween: 0,
   modules: [Navigation],
@@ -18,5 +18,15 @@ const swiper = new Swiper(".gallery-swiper", {
     1024: {
       slidesPerView: 4,
     },
+  },
+});
+
+const clergySwiper = new Swiper(".clergy-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  modules: [Navigation],
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

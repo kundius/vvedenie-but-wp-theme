@@ -135,8 +135,8 @@ $post_news = new WP_Query([
               </div>
               <?php endforeach; ?>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next clergy-swiper-button-next"></div>
+            <div class="swiper-button-prev clergy-swiper-button-prev"></div>
           </div>
           <?php endif; ?>
         </div>
