@@ -48,7 +48,7 @@
         <div class="underground-layout__services">
           <div class="underground-services__title">Написать</div>
 
-          <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="feedback js-form">
+          <form action="/wp-json/contact-form-7/v1/contact-forms/32/feedback" method="post" class="feedback js-form">
             <div class="feedback__your-name">
               <input type="text" name="your-name" class="ui-input" placeholder="Имя" />
             </div>
