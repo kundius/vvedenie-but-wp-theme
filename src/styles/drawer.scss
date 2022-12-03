@@ -91,49 +91,19 @@
   margin-bottom: 8px;
 }
 
-.drawer-headline__about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .drawer-headline__logo {
   display: block;
   width: 160px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 .drawer-headline__logo img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.drawer-headline__phone {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: -0.005em;
-  line-height: 1;
-  color: #000;
-  text-decoration: none;
-  margin-top: 2px;
-}
-
-.drawer-headline__feedback {
-  display: inline-flex;
-  width: 36px;
-  height: 36px;
-  align-items: center;
-  justify-content: center;
-  background: #fbbb49;
-  border-radius: 50%;
-  color: #404040;
-  padding: 0;
-  border: none;
-}
-
-.drawer-headline__feedback svg {
-  display: block;
-  fill: currentColor;
 }
 
 .drawer-contacts {
@@ -178,56 +148,6 @@
 
 .drawer-contacts__email-text {
   border-bottom: 1px dotted currentColor;
-}
-
-.drawer-contacts__time {
-  text-align: center;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.drawer-addess {
-  margin-top: 18px;
-}
-
-.drawer-addess__item {
-  display: flex;
-}
-
-.drawer-addess__item + .drawer-addess__item {
-  margin-top: 16px;
-}
-
-.drawer-addess__item-icon {
-  width: 20px;
-  margin-right: 10px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-end;
-  color: #404040;
-}
-
-.drawer-addess__item-icon svg {
-  display: block;
-  fill: currentColor;
-}
-
-.drawer-addess__item-body {
-
-}
-
-.drawer-addess__item-title {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-}
-
-.drawer-addess__item-content {
-  font-size: 14px;
-  line-height: 16px;
-  color: #000;
 }
 
 /* первый уровень */

@@ -85,6 +85,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @include below(md) {
+    display: none;
+  }
 }
 
 .header__menu .menu-item {

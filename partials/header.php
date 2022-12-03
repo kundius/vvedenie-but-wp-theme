@@ -9,7 +9,7 @@
 
     <div class="header__logo">
       <a href="/">
-        vvedenie-but.ru
+        <?php bloginfo('name') ?>
         <!-- <img src="<?php bloginfo('template_url') ?>/dist/images/logo.png" alt="<?php bloginfo('name') ?>" /> -->
       </a>
     </div>
