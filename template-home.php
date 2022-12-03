@@ -193,35 +193,31 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
-      <script language="Javascript"
-src="https://script.pravoslavie.ru/calendar.php?advanced=1&date=0927"></script>
-<p align="center"><b><font face="Arial" size="5">
-<script language="Javascript">print_day(); </script></font></b></p>
-<p align="center"><b><font color="#FF0000" size="3" face="Arial">&nbsp;
-<script language="Javascript">print_holiday(); </script></font></b>
-<p align="center">&nbsp;
-<table border="0" cellpadding="5" cellspacing="0" width="100%">
-<tr>
-<td width="50%"><b>
-<script language="Javascript">print_week()</script></b></td>
-<td width="50%" align="right">
-<script language="Javascript">print_post(); </script>&nbsp;<br>
-<i><script language="Javascript">print_trapeza();</script></i></td>
-</tr>
-</table>
-<table border="0" cellpadding="5" cellspacing="0" width="100%">
-<tr>
-<td width="70%" valign="top">
-<script language="Javascript">print_saints(); </script>
-<p>&nbsp;
-<script language="Javascript">print_chten(); </script></td>
-<td width="30%" bgcolor="#CCCCCC"><font size="1" face="Arial">&nbsp;
-<script language="Javascript">print_hrams(); </script>
-</font></td></tr>
-</table>
+      <?php if ($calendar = get_field('calendar')): ?>
+      <section class="calendar">
+        <div class="ui-container">
+          <div class="calendar-headline">
+            <?php if ($calendar['title']): ?>
+            <div class="calendar-headline__title">
+              <?php echo $calendar['title'] ?>
+            </div>
+            <?php endif; ?>
+            <?php if ($calendar['description']): ?>
+            <div class="calendar-headline__description">
+              <?php echo $calendar['description'] ?>
+            </div>
+            <?php endif; ?>
+          </div>
 
-      <script type="text/javascript" src="https://script.pravoslavie.ru/icon.php"></script>
-<script type="text/javascript" src="https://script.days.ru/calendar.php?hrams=0"></script>
+          <?php if ($calendar['widget']): ?>
+          <div class="calendar__widget">
+            <?php echo $calendar['widget'] ?>
+          </div>
+          <?php endif; ?>
+        </div>
+      </section>
+      <?php endif; ?>
+
       <div id="az_calendar_embed"></div><script>(function(){fetch("https://azbyka.ru/days/calendar?embed=js,styles,legend").then(response => response.text()).then(data => {document.getElementById("az_calendar_embed").innerHTML = data;});})();</script>
       
       <?php get_template_part('partials/footer');?>
