@@ -68,35 +68,35 @@ if (strpos($post->post_content, '<!--more-->')) {
             </div>
           </div>
         </div>
+      </div>
 
-        <?php if ($see_also = get_field('post_see-also')): ?>
-        <div class="see-also">
-          <div class="ui-container">
-            <div class="see-also__title">Читайте также:</div>
-            <div class="see-also__grid">
-              <?php foreach ($see_also as $item): ?>
-              <div class="see-also__grid-cell">
-                <article class="blog-card">
-                  <figure class="blog-card__image">
-                    <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'theme-medium') ?>" alt="<?php echo get_the_title($item->ID) ?>" />
-                  </figure>
-                  <div class="blog-card__title">
-                    <a href="<?php the_permalink($item->ID) ?>"><?php echo get_the_title($item->ID) ?></a>
-                  </div>
-                  <div class="blog-card__date">
-                    <?php echo get_the_date('d.m.Y', $item->ID) ?>
-                  </div>
-                  <div class="blog-card__description">
-                    <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt($item->ID), 180, ' «...»') ?>
-                  </div>
-                </article>
-              </div>
-              <?php endforeach ?>
+      <?php if ($see_also = get_field('post_see-also')): ?>
+      <div class="see-also">
+        <div class="ui-container">
+          <div class="see-also__title">Читайте также:</div>
+          <div class="see-also__grid">
+            <?php foreach ($see_also as $item): ?>
+            <div class="see-also__grid-cell">
+              <article class="blog-card">
+                <figure class="blog-card__image">
+                  <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'theme-medium') ?>" alt="<?php echo get_the_title($item->ID) ?>" />
+                </figure>
+                <div class="blog-card__title">
+                  <a href="<?php the_permalink($item->ID) ?>"><?php echo get_the_title($item->ID) ?></a>
+                </div>
+                <div class="blog-card__date">
+                  <?php echo get_the_date('d.m.Y', $item->ID) ?>
+                </div>
+                <div class="blog-card__description">
+                  <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt($item->ID), 180, ' «...»') ?>
+                </div>
+              </article>
             </div>
+            <?php endforeach ?>
           </div>
         </div>
-        <?php endif?>
       </div>
+      <?php endif?>
 
       <script src="https://yastatic.net/share2/share.js"></script>
 
