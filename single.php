@@ -34,46 +34,36 @@ if (strpos($post->post_content, '<!--more-->')) {
             <h1 class="single-headline__title"><?php the_title()?></h1>
           </div>
 
-            <div class="single-main">
-              <?php if (has_post_thumbnail()): ?>
-                <figure class="single-thumbnail">
-                  <div class="single-thumbnail__image">
-                    <?php the_post_thumbnail('full')?>
-                  </div>
-                  <?php if ($caption = get_the_post_thumbnail_caption()): ?>
-                  <div class="single-thumbnail__caption">
-                    <?php echo $caption ?>
-                  </div>
-                  <?php endif?>
-                </figure>
-              <?php endif?>
+          <div class="single-main">
+            <?php if (has_post_thumbnail()): ?>
+              <figure class="single-thumbnail">
+                <div class="single-thumbnail__image">
+                  <?php the_post_thumbnail('full')?>
+                </div>
+                <?php if ($caption = get_the_post_thumbnail_caption()): ?>
+                <div class="single-thumbnail__caption">
+                  <?php echo $caption ?>
+                </div>
+                <?php endif?>
+              </figure>
+            <?php endif?>
 
-              <?php if ($excerpt): ?>
-              <div class="single-main__excerpt ui-content">
-                <?php echo $excerpt ?>
+            <?php if ($excerpt): ?>
+            <div class="single-main__excerpt ui-content">
+              <?php echo $excerpt ?>
+            </div>
+            <?php endif?>
+
+            <div class="single-main__content ui-content">
+              <?php echo $content ?>
+            </div>
+
+            <div class="single-meta">
+              <div class="single-meta__tags">
+                <?php the_tags('')?>
               </div>
-              <?php endif?>
-
-              <div class="single-meta">
-                <div class="single-meta__tags">
-                  <?php the_tags('')?>
-                </div>
-                <div class="single-meta__share">
-                  <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
-                </div>
-              </div>
-
-              <div class="single-main__content ui-content">
-                <?php echo $content ?>
-              </div>
-
-              <div class="single-meta">
-                <div class="single-meta__tags">
-                  <?php the_tags('')?>
-                </div>
-                <div class="single-meta__share">
-                  <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
-                </div>
+              <div class="single-meta__share">
+                <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
               </div>
             </div>
           </div>

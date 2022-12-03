@@ -42,7 +42,7 @@
   font-weight: bold;
   margin: 0;
   font-size: 42px;
-  color: #215578;
+  color: $primary-color;
   line-height: 1;
 
   @include below(sm) {

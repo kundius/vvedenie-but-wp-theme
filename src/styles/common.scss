@@ -1,5 +1,9 @@
 .page-breadcrumbs > * > span {
-  margin-right: 8px;
+  margin: 0 8px;
+}
+
+.page-breadcrumbs > * > span:first-child {
+  margin-left: 0;
 }
 
 .page-breadcrumbs a {
