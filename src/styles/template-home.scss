@@ -97,7 +97,7 @@
 }
 
 .gallery {
-  padding: 64px 0 0;
+  padding: 80px 0 0;
   background: #f8f9fa;
 }
 
@@ -175,6 +175,14 @@
 }
 
 .clergy-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clergy-item__name {
