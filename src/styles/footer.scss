@@ -483,6 +483,10 @@
   align-items: center;
 }
 
+._mail-failed .feedback__failed {
+  display: flex;
+}
+
 .feedback__failed::before {
   content: '';
   position: absolute;
