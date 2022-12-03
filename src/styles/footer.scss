@@ -49,6 +49,10 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 48px;
+
+  @include below(sm) {
+    margin-bottom: 24px;
+  }
 }
 
 .underground-contacts__details {
@@ -211,6 +215,10 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 48px;
+
+  @include below(sm) {
+    margin-bottom: 24px;
+  }
 }
 
 .underground-services__list {
