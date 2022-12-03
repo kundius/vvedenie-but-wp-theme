@@ -307,7 +307,7 @@
 
 .blog-card__image {
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .blog-card__image img {
@@ -319,7 +319,7 @@
 .blog-card__title {
   font-size: 20px;
   color: $primary-color;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .blog-card__title a {
@@ -342,7 +342,7 @@
 }
 
 .blog-card__description {
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: 16px;
   line-height: 1.5;
 }
