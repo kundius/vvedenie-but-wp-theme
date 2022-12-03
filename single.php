@@ -67,9 +67,11 @@ if (strpos($post->post_content, '<!--more-->')) {
               </div>
             </div>
           </div>
+        </div>
 
-          <?php if ($see_also = get_field('post_see-also')): ?>
-          <div class="see-also">
+        <?php if ($see_also = get_field('post_see-also')): ?>
+        <div class="see-also">
+          <div class="ui-container">
             <div class="see-also__title">Читайте также:</div>
             <div class="see-also__grid">
               <?php foreach ($see_also as $item): ?>
@@ -92,8 +94,8 @@ if (strpos($post->post_content, '<!--more-->')) {
               <?php endforeach ?>
             </div>
           </div>
-          <?php endif?>
         </div>
+        <?php endif?>
       </div>
 
       <script src="https://yastatic.net/share2/share.js"></script>
