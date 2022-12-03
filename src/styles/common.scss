@@ -39,9 +39,16 @@
 
 .page-body {
   padding-bottom: 80px;
+  flex-grow: 1;
 }
 
 .page-body__content {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
