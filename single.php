@@ -26,64 +26,54 @@ if (strpos($post->post_content, '<!--more-->')) {
 
       <div class="single-body">
         <div class="ui-container">
-          <div class="single-layout">
-            <div class="single-layout__content">
-              <div class="single-headline">
-                <div class="single-headline__date">
-                  <?php echo get_the_date('d.m.Y') ?>
-                </div>
-
-                <h1 class="single-headline__title"><?php the_title()?></h1>
-              </div>
-
-              <div class="single-main">
-                <?php if (has_post_thumbnail()): ?>
-                  <figure class="single-thumbnail">
-                    <div class="single-thumbnail__image">
-                      <?php the_post_thumbnail('full')?>
-                    </div>
-                    <?php if ($caption = get_the_post_thumbnail_caption()): ?>
-                    <div class="single-thumbnail__caption">
-                      <?php echo $caption ?>
-                    </div>
-                    <?php endif?>
-                  </figure>
-                <?php endif?>
-
-                <?php if ($excerpt): ?>
-                <div class="single-main__excerpt ui-content">
-                  <?php echo $excerpt ?>
-                </div>
-                <?php endif?>
-
-                <div class="single-meta">
-                  <div class="single-meta__tags">
-                    <?php the_tags('')?>
-                  </div>
-                  <div class="single-meta__share">
-                    <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
-                  </div>
-                </div>
-
-                <div class="single-main__content ui-content">
-                  <?php echo $content ?>
-                </div>
-
-                <div class="single-meta">
-                  <div class="single-meta__tags">
-                    <?php the_tags('')?>
-                  </div>
-                  <div class="single-meta__share">
-                    <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
-                  </div>
-                </div>
-              </div>
+          <div class="single-headline">
+            <div class="single-headline__date">
+              <?php echo get_the_date('d.m.Y') ?>
             </div>
 
-            <div class="single-layout__side">
-              <div class="single-layout__side-sicky">
-                <?php get_template_part('partials/side-news')?>
-                <?php get_template_part('partials/side-subscribe')?>
+            <h1 class="single-headline__title"><?php the_title()?></h1>
+          </div>
+
+            <div class="single-main">
+              <?php if (has_post_thumbnail()): ?>
+                <figure class="single-thumbnail">
+                  <div class="single-thumbnail__image">
+                    <?php the_post_thumbnail('full')?>
+                  </div>
+                  <?php if ($caption = get_the_post_thumbnail_caption()): ?>
+                  <div class="single-thumbnail__caption">
+                    <?php echo $caption ?>
+                  </div>
+                  <?php endif?>
+                </figure>
+              <?php endif?>
+
+              <?php if ($excerpt): ?>
+              <div class="single-main__excerpt ui-content">
+                <?php echo $excerpt ?>
+              </div>
+              <?php endif?>
+
+              <div class="single-meta">
+                <div class="single-meta__tags">
+                  <?php the_tags('')?>
+                </div>
+                <div class="single-meta__share">
+                  <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
+                </div>
+              </div>
+
+              <div class="single-main__content ui-content">
+                <?php echo $content ?>
+              </div>
+
+              <div class="single-meta">
+                <div class="single-meta__tags">
+                  <?php the_tags('')?>
+                </div>
+                <div class="single-meta__share">
+                  <div class="ya-share2" data-curtain data-shape="round" data-services="vkontakte,odnoklassniki,telegram"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -94,28 +84,19 @@ if (strpos($post->post_content, '<!--more-->')) {
             <div class="see-also__grid">
               <?php foreach ($see_also as $item): ?>
               <div class="see-also__grid-cell">
-                <article class="archive-card">
-                  <figure class="archive-card__image">
+                <article class="blog-card">
+                  <figure class="blog-card__image">
                     <img src="<?php echo get_the_post_thumbnail_url($item->ID, 'theme-medium') ?>" alt="<?php echo get_the_title($item->ID) ?>" />
                   </figure>
-                  <div class="archive-card__body">
-                    <div class="archive-card__date">
-                      <?php echo get_the_date('d.m.Y', $item->ID) ?>
-                    </div>
-                    <h2 class="archive-card__title">
-                      <a href="<?php the_permalink($item->ID) ?>"><?php echo get_the_title($item->ID) ?></a>
-                    </h2>
-                    <div class="archive-card__excerpt">
-                      <?php echo get_the_excerpt($item->ID) ?>
-                    </div>
+                  <div class="blog-card__title">
+                    <a href="<?php the_permalink($item->ID) ?>"><?php echo get_the_title($item->ID) ?></a>
                   </div>
-                  <?php if ($tags = get_the_tags($item->ID)): ?>
-                  <div class="archive-card__tags">
-                    <?php foreach ($tags as $tag): ?>
-                    <a href="<?php echo get_term_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
-                    <?php endforeach ?>
+                  <div class="blog-card__date">
+                    <?php echo get_the_date('d.m.Y', $item->ID) ?>
                   </div>
-                  <?php endif ?>
+                  <div class="blog-card__description">
+                    <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt($item->ID), 180, ' «...»') ?>
+                  </div>
                 </article>
               </div>
               <?php endforeach ?>
