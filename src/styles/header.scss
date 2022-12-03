@@ -25,7 +25,44 @@
 }
 
 .header__toggle {
-  display: none;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(62, 162, 228, 0.22);
+  }
+
+  span {
+    width: 24px;
+    height: 4px;
+    background: #0d5c97;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(1) {
+      margin-top: -8px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 8px;
+    }
+  }
+
+  @include above(md) {
+    display: none;
+  }
 }
 
 .header__logo {
