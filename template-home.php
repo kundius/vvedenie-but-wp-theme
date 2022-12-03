@@ -193,7 +193,9 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
-      <iframe src="https://azbyka.ru/days/calendar/?embed=legend" width="100%" height="580" scrolling="auto"></iframe>
+      <script type="text/javascript" src="https://script.pravoslavie.ru/icon.php"></script>
+<script type="text/javascript" src="https://script.days.ru/calendar.php?hrams=0"></script>
+      <div id="az_calendar_embed"></div><script>(function(){fetch("https://azbyka.ru/days/calendar?embed=js,styles,legend").then(response => response.text()).then(data => {document.getElementById("az_calendar_embed").innerHTML = data;});})();</script>
       
       <?php get_template_part('partials/footer');?>
     </div>
