@@ -16,6 +16,7 @@
   width: 50%;
   padding-left: 30px;
   padding-top: 30px;
+  display: flex;
 }
 
 .underground-layout__services {
@@ -25,7 +26,9 @@
 }
 
 .underground-contacts {
-
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .underground-contacts__title {
@@ -155,7 +158,7 @@
 
 .underground-contacts__links {
   padding: 0;
-  margin: 37px 0 0;
+  margin: auto 0 0;
   list-style: none;
 }
 
@@ -356,6 +359,8 @@
 .feedback {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
 .feedback__your-name {
@@ -376,17 +381,17 @@
 .feedback__message {
   grid-column: 2 / 3;
   grid-row: 1 / 4;
+  display: flex;
 }
 
 .feedback__rules {
-  margin-top: 12px;
+  margin: 5px 0;
   color: #d8d8d8;
   grid-column: 1 / 3;
   grid-row: 4 / 5;
 }
 
 .feedback__submit {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   grid-column: 1 / 3;
@@ -401,7 +406,7 @@
   }
 }
 
-.feedback-form__success {
+.feedback__success {
   display: none;
   grid-row: 1 / 6;
   grid-column: 1 / 3;
@@ -413,7 +418,7 @@
   align-items: center;
 }
 
-.feedback-form__success::before {
+.feedback__success::before {
   content: '';
   position: absolute;
   left: -8px;
@@ -425,12 +430,12 @@
   background: rgba(88, 115, 132, 0.658);
 }
 
-.feedback-form__success::after {
+.feedback__success::after {
   content: '';
   display: block;
 }
 
-.feedback-form__failed {
+.feedback__failed {
   display: none;
   grid-row: 1 / 6;
   grid-column: 1 / 3;
@@ -442,7 +447,7 @@
   align-items: center;
 }
 
-.feedback-form__failed::before {
+.feedback__failed::before {
   content: '';
   position: absolute;
   left: -8px;
@@ -454,7 +459,7 @@
   background: rgba(88, 115, 132, 0.658);
 }
 
-.feedback-form__failed::after {
+.feedback__failed::after {
   content: '';
   display: block;
 }
@@ -474,6 +479,7 @@
   font-size: 24px;
   font-weight: 500;
   text-align: center;
+  color: #fff;
 }
 
 .feedback-result__body {
@@ -487,11 +493,12 @@
   font-weight: 400;
   text-align: center;
   margin-bottom: 32px;
+  color: #fff;
 }
 
 .feedback-result__body-close {
-  border: 2px solid #8294ab;
-  background-color: #587384;
+  border: 2px solid #ba482c;
+  background-color: #ba482c;
   text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
   color: #fefeff;
   font-size: 14px;
@@ -510,6 +517,6 @@
 }
 
 .feedback-result__body-close:hover {
-  border-color: #8294ab;
-  background-color: #8294ab;
+  border-color: #ba482c;
+  background-color: #a35643;
 }
