@@ -187,7 +187,7 @@ $post_news = new WP_Query([
           </div>
 
           <div class="blog__more">
-            <a href="<?php echo $intro['link'] ?>" class="ui-button-primary">Смотреть все</a>
+            <a href="<?php echo $blog['link'] ?>" class="ui-button-primary">Смотреть все</a>
           </div>
         </div>
       </section>
