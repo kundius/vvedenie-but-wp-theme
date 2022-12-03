@@ -35,8 +35,8 @@ $post_news = new WP_Query([
           </div>
           <?php endif; ?>
           <?php if ($intro['link']): ?>
-          <div class="intro-link">
-            <a href="<?php echo $intro['link'] ?>"  class="intro-link__button">Узнать больше</a>
+          <div class="intro__link">
+            <a href="<?php echo $intro['link'] ?>"  class="ui-button-primary">Узнать больше</a>
           </div>
           <?php endif; ?>
         </div>
@@ -143,7 +143,7 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
-      <?php if ($blog = get_field('blog') && $post_news->have_posts()): ?>
+      <?php if (($blog = get_field('blog')) && $post_news->have_posts()): ?>
       <section class="blog">
         <div class="ui-container">
           <div class="blog-headline">
@@ -187,7 +187,7 @@ $post_news = new WP_Query([
           </div>
 
           <div class="blog__more">
-            <a href="<?php echo $intro['link'] ?>" class="ui-button-submit">Смотреть все</a>
+            <a href="<?php echo $intro['link'] ?>" class="ui-button-primary">Смотреть все</a>
           </div>
         </div>
       </section>
