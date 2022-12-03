@@ -193,7 +193,7 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
-      <div id="az_calendar_embed"></div><script>(function(){fetch("https://azbyka.ru/days/calendar?embed=js,styles,legend").then(response => response.text()).then(data => {document.getElementById("az_calendar_embed").innerHTML = data;});})();</script>
+      <iframe src="https://azbyka.ru/days/calendar/?embed=legend" width="100%" height="580" scrolling="auto"></iframe>
       
       <?php get_template_part('partials/footer');?>
     </div>
