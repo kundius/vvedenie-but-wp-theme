@@ -117,7 +117,7 @@
   padding-right: 8px;
 }
 
-.drawer-contacts__email {
+.drawer-contacts__link {
   display: flex;
   align-items: center;
   color: #333;
@@ -127,26 +127,7 @@
   margin-bottom: 12px;
 }
 
-.drawer-contacts__email-icon {
-  margin-right: 5px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fbbb49;
-  color: #404040;
-}
-
-.drawer-contacts__email-icon svg {
-  display: block;
-  fill: currentColor;
-  width: 16px;
-  height: 10px;
-}
-
-.drawer-contacts__email-text {
+.drawer-contacts__link-text {
   border-bottom: 1px dotted currentColor;
 }
 
