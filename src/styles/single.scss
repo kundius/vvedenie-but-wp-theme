@@ -238,8 +238,13 @@
   width: calc(100% / 3);
 
   @include below(md) {
+    width: 50%;
     &:nth-child(3) {
       display: none;
     }
+  }
+
+  @include below(sm) {
+    width: 100%;
   }
 }
