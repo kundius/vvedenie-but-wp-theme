@@ -143,38 +143,51 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
-      <?php if ($post_news->have_posts()): ?>
-      <section class="home-news">
+      <?php if ($blog = get_field('blog') && $post_news->have_posts()): ?>
+      <section class="blog">
         <div class="ui-container">
-          <div class="home-news__title">
-            Новости
+          <div class="blog-headline">
+            <?php if ($blog['title']): ?>
+            <div class="blog-headline__title">
+              <?php echo $blog['title'] ?>
+            </div>
+            <?php endif; ?>
+            <?php if ($blog['description']): ?>
+            <div class="blog-headline__description">
+              <?php echo $blog['description'] ?>
+            </div>
+            <?php endif; ?>
           </div>
 
-          <div class="home-news__list">
-              <div class="home-news-list">
+          <div class="blog__list">
+            <div class="blog-list">
               <?php while ($post_news->have_posts()): ?>
               <?php $post_news->the_post()?>
-              <div class="home-news-list__item">
-                <article class="home-news-card">
-                  <figure class="home-news-card__image">
+              <div class="blog-list__item">
+                <article class="blog-card">
+                  <figure class="blog-card__image">
                     <img src="<?php the_post_thumbnail_url('theme-medium')?>" alt="<?php the_title()?>" />
                   </figure>
-                  <div class="home-news-card__body">
-                    <div class="home-news-card__date">
-                      <?php echo get_the_date('d.m.Y')?>
-                    </div>
-                    <div class="home-news-card__title">
-                      <a href="<?php the_permalink()?>">
-                        <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_title(), 120, ' «...»') ?>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="15" viewBox="0 0 25 15"><path d="M18 14.998v-6h-8v-3s5.38.021 8 0V0l6.068 7.95zm-13-9h3v3H5zm-5 0h3v3H0z"/></svg>
-                      </a>
-                    </div>
+                  <div class="blog-card__title">
+                    <a href="<?php the_permalink()?>">
+                      <?php the_title() ?>
+                    </a>
+                  </div>
+                  <div class="blog-card__date">
+                    <?php echo get_the_date('d.m.Y') ?>
+                  </div>
+                  <div class="blog-card__description">
+                    <?php echo \DomenART\Theme\Services\Theme::cut_string(get_the_excerpt(), 180, ' «...»') ?>
                   </div>
                 </article>
               </div>
               <?php endwhile?>
-              <?php wp_reset_postdata()?>
+              <?php wp_reset_postdata() ?>
             </div>
+          </div>
+
+          <div class="blog__more">
+            <a href="<?php echo $intro['link'] ?>" class="ui-button-submit">Смотреть все</a>
           </div>
         </div>
       </section>
