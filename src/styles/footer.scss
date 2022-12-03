@@ -96,6 +96,7 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.09em;
+  margin-bottom: 16px;
 }
 
 .underground-contacts__email a {
@@ -132,6 +133,11 @@
   display: flex;
   align-items: center;
   padding-bottom: 16px;
+
+  @include below(md) {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
 }
 
 .underground-contacts__map a {

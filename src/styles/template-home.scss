@@ -38,14 +38,27 @@
 .about-layout {
   display: flex;
   gap: 80px;
+
+  @include below(md) {
+    gap: 40px;
+    flex-direction: column;
+  }
 }
 
 .about-layout__text {
   width: 60%;
+
+  @include below(md) {
+    width: 100%;
+  }
 }
 
 .about-layout__image {
   width: 40%;
+
+  @include below(md) {
+    width: 100%;
+  }
 }
 
 .about__name {
@@ -316,6 +329,12 @@
   padding-left: 32px;
   padding-top: 32px;
   width: calc(100% / 3);
+
+  @include below(md) {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
 }
 
 .blog-card {
