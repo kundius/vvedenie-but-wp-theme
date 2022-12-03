@@ -1,0 +1,39 @@
+.page-breadcrumbs a {
+  color: #777;
+  text-decoration: none;
+}
+
+.page-breadcrumbs a:hover {
+  color: #333;
+}
+
+.page-breadcrumbs {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #333;
+  font-size: 14px;
+}
+
+.page-headline {
+  margin-bottom: 48px;
+}
+
+.page-headline__title {
+  margin: 0;
+  font-size: 700;
+  font-size: 40px;
+  color: $primary-color;
+}
+
+.page-headline__title_normal {
+  font-size: 40px;
+}
+
+.page-headline__title_medium {
+  font-size: 36px;
+}
+
+.page-headline__title_small {
+
+  font-size: 32px;
+}
