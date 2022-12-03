@@ -193,6 +193,33 @@ $post_news = new WP_Query([
       </section>
       <?php endif; ?>
 
+      <script language="Javascript"
+src="https://script.pravoslavie.ru/calendar.php?advanced=1&date=0927"></script>
+<p align="center"><b><font face="Arial" size="5">
+<script language="Javascript">print_day(); </script></font></b></p>
+<p align="center"><b><font color="#FF0000" size="3" face="Arial">&nbsp;
+<script language="Javascript">print_holiday(); </script></font></b>
+<p align="center">&nbsp;
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<tr>
+<td width="50%"><b>
+<script language="Javascript">print_week()</script></b></td>
+<td width="50%" align="right">
+<script language="Javascript">print_post(); </script>&nbsp;<br>
+<i><script language="Javascript">print_trapeza();</script></i></td>
+</tr>
+</table>
+<table border="0" cellpadding="5" cellspacing="0" width="100%">
+<tr>
+<td width="70%" valign="top">
+<script language="Javascript">print_saints(); </script>
+<p>&nbsp;
+<script language="Javascript">print_chten(); </script></td>
+<td width="30%" bgcolor="#CCCCCC"><font size="1" face="Arial">&nbsp;
+<script language="Javascript">print_hrams(); </script>
+</font></td></tr>
+</table>
+
       <script type="text/javascript" src="https://script.pravoslavie.ru/icon.php"></script>
 <script type="text/javascript" src="https://script.days.ru/calendar.php?hrams=0"></script>
       <div id="az_calendar_embed"></div><script>(function(){fetch("https://azbyka.ru/days/calendar?embed=js,styles,legend").then(response => response.text()).then(data => {document.getElementById("az_calendar_embed").innerHTML = data;});})();</script>
