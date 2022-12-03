@@ -1,15 +1,27 @@
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
+  // left: 0;
+  // width: 100%;
   z-index: 200;
+  background: #333;
+  transition: background .5s ease;
+}
+
+.page-template-template-home .header {
+  background: transparent;
+  margin-bottom: -60px;
+}
+
+.page-template-template-home.float-visible .header {
+  background: #333;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   align-items: center;
 }
 
