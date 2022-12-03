@@ -49,19 +49,19 @@
           <div class="underground-services__title">Написать</div>
 
           <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="feedback js-form">
-            <div class="feedback__field">
+            <div class="feedback__your-name">
               <input type="text" name="your-name" class="ui-input" placeholder="Имя" />
             </div>
 
-            <div class="feedback__field">
+            <div class="feedback__your-phone">
               <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон" />
             </div>
 
-            <div class="feedback__field">
+            <div class="feedback__your-email">
               <input type="email" name="your-email" class="ui-input" placeholder="E-mail" />
             </div>
 
-            <div class="feedback__field">
+            <div class="feedback__message">
               <textarea name="message" class="ui-textarea" placeholder="Сообщение"></textarea>
             </div>
 

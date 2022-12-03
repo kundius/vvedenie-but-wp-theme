@@ -33,7 +33,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 58px;
+  margin-bottom: 48px;
 }
 
 .underground-contacts__details {
@@ -188,6 +188,7 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 48px;
 }
 
 .underground-services__list {
@@ -353,22 +354,43 @@
 }
 
 .feedback {
-
+  position: relative;
+  display: grid;
 }
 
-.feedback__field + .feedback__field {
-  margin-top: 10px;
+.feedback__your-name {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.feedback__your-phone {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.feedback__your-email {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.feedback__message {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
 }
 
 .feedback__rules {
   margin-top: 12px;
   color: #d8d8d8;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
 }
 
 .feedback__submit {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
 }
 
 .feedback__loader {
