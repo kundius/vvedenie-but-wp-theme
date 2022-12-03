@@ -71,11 +71,11 @@
 
 .underground-contacts__phone a:hover {
   text-decoration: none;
-  color: #ff993f;
+  color: $primary-color;
 }
 
 .underground-contacts__phone a:hover svg {
-  fill: #ff993f;
+  fill: $primary-color;
 }
 
 .underground-contacts__phone svg {
@@ -104,12 +104,12 @@
 
 .underground-contacts__email a:hover {
   text-decoration: none;
-  color: #ff993f;
-  border-bottom-color: #ff993f;
+  color: $primary-color;
+  border-bottom-color: $primary-color;
 }
 
 .underground-contacts__email a:hover svg {
-  fill: #ff993f;
+  fill: $primary-color;
 }
 
 .underground-contacts__email svg {
@@ -140,12 +140,12 @@
 
 .underground-contacts__map a:hover {
   text-decoration: none;
-  color: #ff993f;
-  border-bottom-color: #ff993f;
+  color: $primary-color;
+  border-bottom-color: $primary-color;
 }
 
 .underground-contacts__map a:hover svg {
-  fill: #ff993f;
+  fill: $primary-color;
 }
 
 .underground-contacts__map svg {
@@ -176,7 +176,7 @@
 
 .underground-contacts__links li a:hover {
   text-decoration: underline;
-  color: #ff993f;
+  color: $primary-color;
 }
 
 .underground-layout__services {
@@ -226,15 +226,15 @@
 
 .underground-services__list li a:hover {
   text-decoration: underline;
-  color: #ff993f;
+  color: $primary-color;
 }
 
 .footer-section {
-  background: url('../images/bg-footer.jpg');
+  background: #333;
 }
 
 .footer {
-  border-top: 1px solid #4c6373;
+  border-top: 1px solid #484848;
   padding-top: 16px;
   padding-bottom: 16px;
   display: flex;
@@ -269,7 +269,7 @@
 
 .footer__map {
   font-size: 14px;
-  color: #b4c5db;
+  color: #fff;
 }
 
 .footer__map a {
@@ -278,7 +278,7 @@
 }
 
 .footer__map a:hover {
-  color: #ffffff;
+  color: $primary-color;
 }
 
 .footer__creator {
