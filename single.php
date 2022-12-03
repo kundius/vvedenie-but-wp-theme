@@ -20,7 +20,7 @@ if (strpos($post->post_content, '<!--more-->')) {
   <body <?php body_class()?>>
     <?php wp_body_open()?>
 
-    <div class="ui-wrapper">
+    <div class="single-wrapper">
       <?php get_template_part('partials/header') ?>
       <?php get_template_part('partials/page-breadcrumbs') ?>
 
