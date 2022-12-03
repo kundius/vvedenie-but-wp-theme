@@ -53,7 +53,7 @@
 }
 
 .about {
-  padding: 80px 0;
+  padding: 5em 0;
 }
 
 .about-layout {
@@ -97,12 +97,12 @@
 }
 
 .gallery {
-  padding: 80px 0 0;
+  padding: 5em 0 0;
   background: #f8f9fa;
 }
 
 .gallery-headline {
-  margin-bottom: 40px;
+  margin-bottom: 3em;
 }
 
 .gallery-headline__title {
@@ -142,11 +142,11 @@
 }
 
 .clergy {
-  padding: 80px 0;
+  padding: 5em 0;
 }
 
 .clergy-headline {
-  margin-bottom: 40px;
+  margin-bottom: 3em;
 }
 
 .clergy-headline__title {
@@ -186,14 +186,36 @@
 }
 
 .clergy-item__name {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clergy-item__name::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  display: block;
+  margin-right: 12px;
+}
+
+.clergy-item__name::after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  display: block;
+  margin-right: 12px;
 }
 
 .clergy-item__description {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 .clergy-item__image {

@@ -116,30 +116,30 @@ $post_news = new WP_Query([
             </div>
             <?php endif; ?>
           </div>
-        </div>
-        <?php if (count($clergy['items']) > 0): ?>
-        <div class="swiper clergy-swiper">
-          <div class="swiper-wrapper">
-            <?php foreach ($clergy['items'] as $item): ?>
-            <div class="swiper-slide">
-              <div class="clergy-item">
-                <div class="clergy-item__image">
-                  <img src="<?php echo $item['image']['sizes']['thumbnail'] ?>" alt="">
-                </div>
-                <div class="clergy-item__description">
-                  <?php echo $item['description'] ?>
-                </div>
-                <div class="clergy-item__name">
-                  <?php echo $item['name'] ?>
+          <?php if (count($clergy['items']) > 0): ?>
+          <div class="swiper clergy-swiper">
+            <div class="swiper-wrapper">
+              <?php foreach ($clergy['items'] as $item): ?>
+              <div class="swiper-slide">
+                <div class="clergy-item">
+                  <div class="clergy-item__image">
+                    <img src="<?php echo $item['image']['sizes']['thumbnail'] ?>" alt="">
+                  </div>
+                  <div class="clergy-item__description">
+                    <?php echo $item['description'] ?>
+                  </div>
+                  <div class="clergy-item__name">
+                    <?php echo $item['name'] ?>
+                  </div>
                 </div>
               </div>
+              <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <?php endif; ?>
         </div>
-        <?php endif; ?>
       </section>
       <?php endif; ?>
 
