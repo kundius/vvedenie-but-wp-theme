@@ -46,8 +46,81 @@
           </div>
         </div>
         <div class="underground-layout__services">
-            <div class="underground-services__title">Услуги</div>
+          <div class="underground-services__title">Написать</div>
 
+          <form action="/wp-json/contact-form-7/v1/contact-forms/234/feedback" method="post" class="feedback js-form">
+            <div class="feedback__field">
+              <input type="text" name="your-name" class="ui-input" placeholder="Имя" />
+            </div>
+
+            <div class="feedback__field">
+              <input type="tel" name="your-phone" class="ui-input" placeholder="Телефон" />
+            </div>
+
+            <div class="feedback__field">
+              <input type="email" name="your-email" class="ui-input" placeholder="E-mail" />
+            </div>
+
+            <div class="feedback__field">
+              <textarea name="message" class="ui-textarea" placeholder="Сообщение"></textarea>
+            </div>
+
+            <div class="feedback__rules">
+              <span class="wpcf7-form-acceptance-wrap">
+                <label class="ui-rules">
+                  <input type="checkbox" name="rules" value="1" class="form-checkbox">
+                  <span></span>
+                  Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+                </label>
+              </span>
+            </div>
+
+            <div class="feedback__submit">
+              <button type="submit" class="ui-button-primary">
+                <span class="ui-loader-square feedback__loader"></span>
+                Отправить
+              </button>
+            </div>
+
+            <div class="feedback__success">
+              <div class="feedback-result feedback-result_success">
+                <div class="feedback-result__head">
+                  <div class="feedback-result__head-icon"></div>
+                  <div class="feedback-result__head-title">
+                    Ваше сообщение
+                    успешно отправлено
+                  </div>
+                </div>
+                <div class="feedback-result__body">
+                  <div class="feedback-result__body-text">
+                    В ближайшее время мы свяжемся с вами.
+                  </div>
+                  <div class="feedback-result__body-close wpcf7-form-status-reset">
+                    Закрыть окно
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feedback__failed">
+              <div class="feedback-result feedback-result_failed">
+                <div class="feedback-result__head">
+                  <div class="feedback-result__head-icon"></div>
+                  <div class="feedback-result__head-title">
+                    Возникла ошибка
+                  </div>
+                </div>
+                <div class="feedback-result__body">
+                  <div class="feedback-result__body-text">
+                    Не удалось отправить сообщение
+                  </div>
+                  <div class="feedback-result__body-close wpcf7-form-status-reset">
+                    Закрыть окно
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
