@@ -541,23 +541,10 @@ p {
     line-height: 36px;
     font-weight: bold;
     margin: 0;
-    padding-left: 90px;
-    position: relative;
   }
 
   * + h2 {
     margin-top: 45px;
-  }
-
-  h2::before {
-    content: '';
-    position: absolute;
-    display: block;
-    left: 4px;
-    top: 16px;
-    background-color: rgb(251, 187, 73);
-    width: 68px;
-    height: 6px;
   }
 
   h3 {
