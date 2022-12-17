@@ -37,7 +37,7 @@
             </div>
             <ul class="underground-contacts__links">
               <li>
-                <a href="<?php the_permalink(49)?>" target="_blank">Пользовательское соглашение</a>
+                <a href="<?php the_permalink(383)?>" target="_blank">Пользовательское соглашение</a>
               </li>
               <li>
                 <a href="<?php the_permalink(3)?>" target="_blank">Политика обработки персональных данных</a>
@@ -70,7 +70,7 @@
                 <label class="ui-rules">
                   <input type="checkbox" name="rules" value="1" class="form-checkbox">
                   <span></span>
-                  Прочитал(-а) <a href="<?php the_permalink(49) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
+                  Прочитал(-а) <a href="<?php the_permalink(383) ?>" target="_blank">Пользовательское соглашение</a> и&nbsp;соглашаюсь с&nbsp;<a href="<?php the_permalink(3) ?>" target="_blank">Политикой конфиденциальности</a>
                 </label>
               </span>
             </div>
@@ -133,7 +133,7 @@
       </div>
       <div class="footer__gap-1"></div>
       <div class="footer__map">
-        <a href="<?php the_permalink(297) ?>">Карта сайта</a>
+        <a href="<?php the_permalink(381) ?>">Карта сайта</a>
       </div>
       <div class="footer__gap-2"></div>
       <div class="footer__counters">
