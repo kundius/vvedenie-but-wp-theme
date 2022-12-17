@@ -90,7 +90,9 @@ $post_news = new WP_Query([
           <div class="swiper-wrapper">
             <?php foreach ($gallery['images'] as $image): ?>
             <div class="swiper-slide">
-              <img class="gallery-swiper__image" src="<?php echo $image['sizes']['theme-medium'] ?>" alt="">
+              <a data-fslightbox="gallery" href="<?php echo $image['sizes']['original'] ?>">
+                <img class="gallery-swiper__image" src="<?php echo $image['sizes']['theme-medium'] ?>" alt="">
+              </a>
             </div>
             <?php endforeach; ?>
           </div>
